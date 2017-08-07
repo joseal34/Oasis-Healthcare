@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment for Web Developer Position at Desert Oasis Healthcare </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="site.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+   <button onclick="tops()" id="btnTop" title="Go back to top of page">Top</button>
+   <header>
+     <div class="wrapper">
+      <i class="fa fa-address-book-o"></i> Assignment for Web Developer Position at Desert Oasis Healthcare
+      <ul> 
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+      </ul>
+     </div>
+   </header>
+
+   <div class="wrapper">
+     <div class="content">
+       <!-- <h1>Find Contacts</h1> -->
+
+       <p class="allContacts">All contacts <i class="fa fa-user-circle"></i></p>
+       <div class="contactsTable">
+         <form>
+           <label for="employeesPerPage" class="searchButton">Find Contact </label><br>
+           <input type="text" name="employeesPerPage" value="" placeholder="Search...." id="formInput" onkeyup="searchEmployee()" class="input"> 
+         </form>
+         <p id="results"></p>
+         <label for="employeesPerPage">Records per page:</label>
+         <select id="employeesPerPage" onchange="paginator(this.value)" name="employeesPerPage"> 
+           <option value="50">50</option>
+           <option value="75">75</option>
+           <option value="100">100</option>
+           <option value="200">200</option>
+         </select>
+         <table width="100%" border="0" class="employeesTable" id="employeesTable">
+           <thead>
+             <tr>
+               <th scope="col">Id</th>
+               <th scope="col">First Name</th>  
+               <th scope="col">Last Name</th> 
+               <th scope="col"></th>
+               <th scope="col">Delete</th>
+             </tr>
+           </thead>
+           <tbody>
+             <!-- Seccio for tablePaginator -->
+             <tr>
+               <td>1000</td>
+               <td>Jose</td>
+               <td>Inzunza</td>
+               <td></td>
+               <td> <span onclick='deletethis(this);' class='deleteR'> &times;</span> </td>
+             </tr>
+           </tbody>
+         </table>
+       </div> <!-- ./contactsTable -->  
+     </div>
+   </div>  
+   <script type="text/javascript" src="site.js"></script>
+ 
+</body>
+</html> 
